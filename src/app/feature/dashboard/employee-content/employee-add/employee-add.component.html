@@ -1,0 +1,116 @@
+<div class="emp-add">
+    <div><a routerLink="../"><i class="fa-solid fa-arrow-left-long"></i>&nbsp;Back to Employee Search</a></div><br>
+    <div class="d-flex flex-row p-2">
+    <div>
+        <h5>Quick add employee to the company</h5>
+        <p>Add an employee by filling the form or add bunch of employees by clicking bulk upload</p>
+        <label for="file-upload" class="custom-file-upload">Add Bulk Employee</label>
+        <input id="file-upload" type="file" accept=".xlsx, .xls" required/>
+    </div>
+    
+       
+    
+    <div>
+        <img src="../../../../../assets/Images/bulk-emp.png" alt="Bulk add Image" class="image">
+    </div>
+</div>
+
+    <hr>
+   
+        <h5 class="heading">Add details of an employee</h5>
+        
+            <form action="" [formGroup]="addEmployeeForm" (ngSubmit)="submit()">
+                <div class="d-flex flex-row">
+                <div class="d-flex flex-column m-3">
+                    <label for="firstName">Employee First Name</label>
+                    <input type="text" placeholder="Employee Name" class="form-control" formControlName="employeeFirstName" id="firstName">
+                    <div *ngIf="addEmployeeForm.get('employeeFirstName').touched && addEmployeeForm.get('employeeFirstName')?.hasError('required')" class="text-danger">
+                            *Employee First Name Required
+                    </div>
+                </div>
+                <div class="d-flex flex-column m-3">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" placeholder="Employee Name" class="form-control" formControlName="middleName" id="middleName">
+                    <div *ngIf="addEmployeeForm.get('middleName').touched && addEmployeeForm.get('middleName')?.hasError('required')" class="text-danger">
+                            *Employee First Name Required
+                    </div>
+                </div>
+                <div class="d-flex flex-column m-3">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" placeholder="Employee Name" class="form-control" formControlName="lastName" id="lastName">
+                    <div *ngIf="addEmployeeForm.get('lastName').touched && addEmployeeForm.get('lastName')?.hasError('required')" class="text-danger">
+                            *Last Name Required
+                    </div>
+                </div>
+               
+                <div class="d-flex flex-column m-3">
+                    <label for="empNumber">Employee Number</label>
+                    <input type="text" placeholder="Employee Id" class="form-control" formControlName="employeeNumber" id="empNumber">
+                    <div *ngIf="addEmployeeForm.get('employeeNumber').touched && addEmployeeForm.get('employeeNumber')?.hasError('required')" class="text-danger">
+                        *Employee Number Required
+                </div>
+                </div>
+                
+            </div>
+            <div class="d-flex flex-row">
+                <div class="d-flex flex-column m-3">
+                    <label for="DateOfJoining" class="">Date Of Joining</label>
+                    <input type="date" placeholder="" class="form-control" formControlName="dateOfJoining">
+                    <div *ngIf="addEmployeeForm.get('dateOfJoining').touched && addEmployeeForm.get('dateOfJoining')?.hasError('required')" class="text-danger" id="DateOfJoining">
+                        *Date of Joining Required
+                </div>
+                </div>
+                <div class="d-flex flex-column m-3">
+                    <label for="location">Location</label>
+                    <select name="location" id="" class="form-control drop-down-select" formControlName="location">
+                        <option value="Bangalore" selected>Bangalore</option>
+                    </select>
+                    <div *ngIf="addEmployeeForm.get('location').touched && addEmployeeForm.get('location')?.hasError('required')" class="text-danger">
+                        *Location Required
+                </div>
+                </div>
+                <div class="d-flex flex-column m-3 marginRight">
+                   
+                    <label for="email">Email Id</label>
+                    <input type="email" placeholder="Email Id" class="form-control" formControlName="email" id="email">
+                
+                    <div *ngIf="addEmployeeForm.get('email').touched && addEmployeeForm.get('email')?.hasError('required')" class="text-danger">
+                        *Email Required
+                </div>
+                </div>
+
+            </div>
+            <p class="m-2">After saving the onboarding Process will start and employee will recevie a welcome email with the to set hit password. </p>
+            <div class="buttons-container">
+                <button class="button" type="submit">save</button>
+                <button class="button">cancel</button>
+
+
+            </div>
+            </form>
+            <!-- <form>
+                <label for="fn">First Name*:</label>
+                <input type="text" id="fn" name="fn" placeholder="Enter First Name">
+
+                <label for="ln">Last Name*:</label>
+                <input type="text" id="ln" name="ln" placeholder="Enter Last Name">
+
+                <label for="id">Employee ID*:</label>
+                <input type="text" id="id" name="id" placeholder="Enter Employee ID">
+
+                <label for="doj">Date of Joining*:</label>
+                <input type="date" id="doj" name="doj">
+
+                <label for="ctc">Annual CTC*:</label>
+                <input type="number" id="ctc" name="ctc" placeholder="Enter Annual CTC">
+
+                <label for="location">Job Location*:</label>
+                <select name="location" id="location">
+                    <option value="Bangaluru">Bangalore</option>
+                </select>
+
+                <label for="email">Email*:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Employee email">
+            </form> -->
+        
+    </div>

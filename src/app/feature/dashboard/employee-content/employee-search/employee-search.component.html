@@ -1,0 +1,85 @@
+
+
+
+<div class="emp-search">
+    
+        <div class="d-flex flex-row m-2">
+            <div class="d-flex flex-row ">
+                <img src="assets/Images/clarity_employee-group-solid.png" alt="logo" style="height: 30px;">
+                <p>Employee</p>
+
+            </div>
+           
+        
+        <div class="m-2">
+            <input type="search" class="search form-control" placeholder="search">
+           
+           
+        </div>
+    </div>
+    <hr class="hr-line">
+
+    <div>
+        <button class="button">EmployeeList</button>
+        <button class="button">RemoveList</button>
+    </div>
+
+    <div class="d-flex flex-row">
+        <input type="search" placeholder="search by employee Number,firstName,lastName,email" class="form-control filter-search" (keyup)="filter($event)">
+        <div class="buttons-container">
+            <button class="addButton">AddBulkUpload</button>
+            <button type="submit" class="addButton" (click)="addbtnclk()">Add New Employee</button>
+            
+        </div>
+    </div>
+    <hr class="hr-line">
+
+    <table  class="table table-striped">
+        <thead>
+            <tr>
+                <th>Employee Number</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Email Id</th>
+                <th>Location</th>
+
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.Employee_Number}}</td>
+                <td>{{emp.Employee_First_Name}}</td>
+                <td>{{emp.Middle_Name}}</td>
+                <td>{{emp.Last_Name}}</td>
+                <td>{{emp.Email}}</td>
+                <td>{{emp.Location}}</td>
+                <!-- <td><button (click)="delete(empId)">Delete</button></td> -->
+            </tr>
+        </tbody>
+
+    </table>
+
+       
+       
+       
+       
+   
+</div>
+<h1>test</h1>
+       
+    
+    <!-- <h1>hello</h1>
+    <div>
+        <h4>Quick employee search</h4>
+    </div>
+    <div>
+        <form>
+            <input type="text">
+            <button type="submit" class="btn btn-info">Search</button>
+        </form>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-danger"(click)="addbtnclk()">Add New Employee</button>
+    </div> -->

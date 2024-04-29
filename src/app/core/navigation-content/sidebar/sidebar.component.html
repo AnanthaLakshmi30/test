@@ -1,0 +1,36 @@
+<nav class="sidebar">
+    <div>
+        <div>
+            <a routerLink="/home"><i class="fa-solid fa-house-chimney"></i><span>Home</span></a>
+        </div>
+        <div class="dropdown">
+            <div class="bg-employee">
+                <li routerLink="employees" (click)="touch()" class="bg-color"><img
+                        src="assets/Images/clarity_employee-group-solid.png" alt="logo"><span>Employees</span></li>
+            </div>
+
+            <div class="dropdown-content" *ngIf="dropdown">
+                <!-- <p class="employee" routerLink="/home/employees/empdetails">Employee Profile</p> -->
+                <p class="employee" (click)="employyeDetails()">Employee Profile</p>
+                <p class="employee">Setup</p>
+               
+                <li routerLink="genarateletters"><p class="employee" (click)="letters()">Admin</p></li>
+                <div *ngIf="letter">
+                <p class="employee">Genarate Letters</p>
+                <li routerLink="templates"><p class="employee">Templates</p></li>
+                <p class="employee">Excel Import</p>
+                <p class="employee">Bulletin Board</p>
+                <p class="employee">Mass Communication</p>
+                </div>
+                
+
+            </div>
+        </div>
+        
+        <!-- <div class="bg-employee">
+            <a routerLink="employees"><img src="assets/Images/clarity_employee-group-solid.png" alt="logo"><span>Employees</span></a>
+        </div> -->
+    </div>
+
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,100 @@
+/* .container{
+    display: flex;
+    flex-direction: row;
+    background-image: url('src/assets/Images/image 7.png');
+    height: 100vh;
+    max-width: 330vh;
+    background-size: cover;
+    
+}
+
+.logo-image{
+    margin-top: 10%;
+}
+
+.login-form{
+    margin-top: 10%;
+    padding:3rem;
+}
+
+/* .formelements{
+
+} */ 
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #47B7D0; */
+    background-image: url('src/assets/images/image 7.png');
+    height: 100vh;
+    
+  }
+   
+  .logo-image{
+    height: 45vh;
+    width: 40vh;
+    margin: 5px;
+  }
+   
+  .card-container{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right,#FFFFFF,#7EB4C1,#A6C0C6);
+    height: 60vh;
+    width: 60vh;
+    margin: 3%;
+    border-radius: 15px;
+  }
+   
+  .heading{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Times New Roman';
+    margin: 5%;
+   
+   
+  }
+   
+  .login-button{
+    background-color:#8C1428;
+    color: #FFFFFF;
+    height: 40px;
+    width: 80px;
+    margin: 3px;
+    border-radius: 8px;
+    border: none;
+    width: 80%;
+   
+  }
+   
+  .forget-password{
+    color: #4339F2;
+    margin-top: 4%;
+    margin-right: 8px;
+    text-decoration: underline;
+  }
+   
+  .last-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+  }
+   
+  input{
+    border-radius: 8px;
+  }
+   
+  
+.checkbox{
+  margin: 2%;
+  
+}
+
+.checkbox-container{
+  display: flex;
+  justify-content: space-between;
+
+}
